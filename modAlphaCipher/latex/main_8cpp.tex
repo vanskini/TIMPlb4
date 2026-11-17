@@ -1,0 +1,47 @@
+\doxysection{Файл main.\+cpp}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$clocale$>$}\newline
+{\ttfamily \#include "{}mod\+Alpha\+Cipher1.\+h"{}}\newline
+Граф включаемых заголовочных файлов для main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a0c2c01c390ee442b67b12ed012390241}{check}} (const wstring \&Text, const wstring \&key, const bool destruct\+Cipher\+Text=false)
+\begin{DoxyCompactList}\small\item\em Прогоняет один тест\+: шифрует, расшифровывает, сравнивает. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
+\begin{DoxyCompactList}\small\item\em Точка входа\+: набор тестов из методички. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\Hypertarget{main_8cpp_a0c2c01c390ee442b67b12ed012390241}\label{main_8cpp_a0c2c01c390ee442b67b12ed012390241} 
+\index{main.cpp@{main.cpp}!check@{check}}
+\index{check@{check}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily void check (\begin{DoxyParamCaption}\item[{const wstring \&}]{Text,  }\item[{const wstring \&}]{key,  }\item[{const bool}]{destruct\+Cipher\+Text = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Прогоняет один тест\+: шифрует, расшифровывает, сравнивает. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em Text} & Исходный текст. \\
+\hline
+{\em key} & Ключ. \\
+\hline
+{\em destruct\+Cipher\+Text} & Если true — портит первую букву шифротекста, чтобы проверить, что decrypt кинет ошибку.\\
+\hline
+\end{DoxyParams}
+Результат печатается в консоль\+: ключ, текст, шифротекст, расшифровка и вердикт Ok/\+Err. \Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+
+
+Точка входа\+: набор тестов из методички. 
+
+Проверяем нормальные ключи, ключи из строчных букв, пустой ключ, ключ с цифрами и запятыми, текст с мусором и порчу шифротекста. 

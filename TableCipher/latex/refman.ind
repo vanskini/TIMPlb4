@@ -1,0 +1,32 @@
+\begin{theindex}
+
+  \item {cipher\_error}, \hyperpage{7}
+    \subitem {cipher\_error}, \hyperpage{7, 8}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {TableCipher}, \hyperpage{9}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {TableCipher}, \hyperpage{10}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{11}
+  \item {main.cpp}, \hyperpage{11}
+    \subitem {main}, \hyperpage{11}
+
+  \indexspace
+
+  \item {TableCipher}, \hyperpage{8}
+    \subitem {decrypt}, \hyperpage{9}
+    \subitem {encrypt}, \hyperpage{10}
+    \subitem {TableCipher}, \hyperpage{9}
+  \item {TableCipher.h}, \hyperpage{11}
+  \item {TableCipher1.cpp}, \hyperpage{12}
+
+\end{theindex}

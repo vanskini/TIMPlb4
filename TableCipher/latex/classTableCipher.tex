@@ -1,0 +1,121 @@
+\doxysection{Table\+Cipher Class Reference}
+\hypertarget{classTableCipher}{}\label{classTableCipher}\index{TableCipher@{TableCipher}}
+
+
+Табличный шифр (маршрутная перестановка).  
+
+
+
+
+{\ttfamily \#include $<$Table\+Cipher.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTableCipher_a0e44b17b083f7ebfc610079f543dbbd8}{Table\+Cipher}} ()=delete
+\begin{DoxyCompactList}\small\item\em Без ключа нельзя. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTableCipher_a040d10a80b3cc657dd5861745e6913f4}{Table\+Cipher}} (int key)
+\begin{DoxyCompactList}\small\item\em Конструктор шифра. \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classTableCipher_a924d1cf6836c72c5be4a683ada5ddd7a}{encrypt}} (const std\+::wstring \&open\+\_\+text) const
+\begin{DoxyCompactList}\small\item\em Шифрует текст. \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classTableCipher_abd310d68bb4e8f0e1619d3b1fa73164d}{decrypt}} (const std\+::wstring \&cipher\+\_\+text) const
+\begin{DoxyCompactList}\small\item\em Расшифровывает текст. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Табличный шифр (маршрутная перестановка). 
+
+Текст пишется в таблицу по строкам, читается по столбцам справа налево. Ключ — число столбцов в таблице. При расшифровке всё делается наоборот. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTableCipher_a0e44b17b083f7ebfc610079f543dbbd8}\label{classTableCipher_a0e44b17b083f7ebfc610079f543dbbd8} 
+\index{TableCipher@{TableCipher}!TableCipher@{TableCipher}}
+\index{TableCipher@{TableCipher}!TableCipher@{TableCipher}}
+\doxysubsubsection{\texorpdfstring{TableCipher()}{TableCipher()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Table\+Cipher\+::\+Table\+Cipher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Без ключа нельзя. 
+
+\Hypertarget{classTableCipher_a040d10a80b3cc657dd5861745e6913f4}\label{classTableCipher_a040d10a80b3cc657dd5861745e6913f4} 
+\index{TableCipher@{TableCipher}!TableCipher@{TableCipher}}
+\index{TableCipher@{TableCipher}!TableCipher@{TableCipher}}
+\doxysubsubsection{\texorpdfstring{TableCipher()}{TableCipher()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Table\+Cipher\+::\+Table\+Cipher (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор шифра. 
+
+Конструктор\+: сохраняет ключ и сразу его проверяет.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Ключ (число столбцов). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classcipher__error}{cipher\+\_\+error}} & Если ключ некорректен. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTableCipher_abd310d68bb4e8f0e1619d3b1fa73164d}\label{classTableCipher_abd310d68bb4e8f0e1619d3b1fa73164d} 
+\index{TableCipher@{TableCipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!TableCipher@{TableCipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::wstring Table\+Cipher\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{cipher\+\_\+text }\end{DoxyParamCaption}) const}
+
+
+
+Расшифровывает текст. 
+
+Расшифровка.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cipher\+\_\+text} & Шифротекст. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Открытый текст. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classcipher__error}{cipher\+\_\+error}} & Если шифротекст некорректен.\\
+\hline
+\end{DoxyExceptions}
+Сначала отмечаем в таблице filled, какие ячейки были заняты при шифровании. Потом заполняем таблицу в том же порядке, в котором читали, и читаем по строкам. \Hypertarget{classTableCipher_a924d1cf6836c72c5be4a683ada5ddd7a}\label{classTableCipher_a924d1cf6836c72c5be4a683ada5ddd7a} 
+\index{TableCipher@{TableCipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!TableCipher@{TableCipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::wstring Table\+Cipher\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{open\+\_\+text }\end{DoxyParamCaption}) const}
+
+
+
+Шифрует текст. 
+
+Шифрование.
+
+
+\begin{DoxyParams}{Parameters}
+{\em open\+\_\+text} & Открытый текст. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Шифротекст. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{classcipher__error}{cipher\+\_\+error}} & Если открытый текст некорректен.\\
+\hline
+\end{DoxyExceptions}
+Заполняем таблицу по строкам, затем читаем по столбцам справа налево. Пустые ячейки (L\textquotesingle{}\textbackslash{}0\textquotesingle{}) пропускаем. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TableCipher_8h}{Table\+Cipher.\+h}}\item 
+\mbox{\hyperlink{TableCipher1_8cpp}{Table\+Cipher1.\+cpp}}\end{DoxyCompactItemize}

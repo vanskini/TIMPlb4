@@ -1,0 +1,31 @@
+\begin{theindex}
+
+  \item {check}
+    \subitem {main.cpp}, \hyperpage{11}
+  \item {cipher\_error}, \hyperpage{7}
+
+  \indexspace
+
+  \item {decrypt}
+    \subitem {modAlphaCipher}, \hyperpage{8}
+
+  \indexspace
+
+  \item {encrypt}
+    \subitem {modAlphaCipher}, \hyperpage{9}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{11}
+  \item {main.cpp}, \hyperpage{11}
+    \subitem {check}, \hyperpage{11}
+    \subitem {main}, \hyperpage{11}
+  \item {modAlphaCipher}, \hyperpage{7}
+    \subitem {decrypt}, \hyperpage{8}
+    \subitem {encrypt}, \hyperpage{9}
+    \subitem {modAlphaCipher}, \hyperpage{8}
+  \item {modAlphaCipher1.cpp}, \hyperpage{12}
+  \item {modAlphaCipher1.h}, \hyperpage{12}
+
+\end{theindex}
